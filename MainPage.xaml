@@ -10,11 +10,11 @@
             VerticalOptions="Center">
 
             <Image
-                Source="pic01.jpg"
-                SemanticProperties.Description="This is an amazing landscape!"
-                HeightRequest="200"
+                Source="shopping_bag.jpg"
+                SemanticProperties.Description="shopping_bag"
+                HeightRequest="300"
                 HorizontalOptions="Center" />
-            <Label FontSize="22" FontAttributes="Bold" Text="This is an amazing landscape!" VerticalOptions="End" />
+            <Label FontSize="22" FontAttributes="Bold" HorizontalOptions="Center" Text="This is a Shopping List kind of app! Enjoy!" VerticalOptions="End" />
         </VerticalStackLayout>
     </ScrollView>
 
