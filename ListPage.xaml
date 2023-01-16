@@ -2,18 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tamasan_Raluca_Lab7.ListPage"
-             Title="ListPage">
+             Title="Make your Classes List">
     <ContentPage.Content xmlns:local="clr-namespace:Tamasan_Raluca_Lab7">
 
         <StackLayout Margin="20">
-            <Editor Placeholder="Enter the description of the shopping list"
+            <Editor Placeholder="Enter the description for your classes list"
                 Text="{Binding Description}"
                 HeightRequest="50" >
                 <Editor.Behaviors>
                     <local:ValidationBehaviour />
                 </Editor.Behaviors>
             </Editor>
-            <Picker x:Name="ShopPicker" Title="Enter Shop Name"/>
+            <Picker x:Name="ShopPicker" Title="Enter TrainingStudio location"/>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -35,9 +35,9 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button Text="Delete selected item" MaximumWidthRequest="300" Clicked="OnDeleteItemButtonClicked"/>
+            <Button Text="Delete selected Class" MaximumWidthRequest="300" Clicked="OnDeleteItemButtonClicked"/>
 
-            <Button Text="Add/Choose Item to buy" MaximumWidthRequest="300" Clicked="OnChooseButtonClicked"/>
+            <Button Text="Add/Choose Class to join" MaximumWidthRequest="300" Clicked="OnChooseButtonClicked"/>
 
 
         </StackLayout>

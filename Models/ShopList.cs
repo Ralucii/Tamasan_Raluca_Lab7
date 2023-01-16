@@ -19,7 +19,7 @@ namespace Tamasan_Raluca_Lab7.Models
 
 
         [ForeignKey(typeof(Shop))]
-        public int ShopID { get; set; }
+        public int? ShopID { get; set; }
 
     }
 

@@ -10,11 +10,11 @@
             VerticalOptions="Center">
 
             <Image
-                Source="shopping_bag.jpg"
+                Source="gym_logo.png"
                 SemanticProperties.Description="shopping_bag"
                 HeightRequest="300"
                 HorizontalOptions="Center" />
-            <Label FontSize="22" FontAttributes="Bold" HorizontalOptions="Center" Text="This is a Shopping List kind of app! Enjoy!" VerticalOptions="End" />
+            <Label FontSize="22" FontAttributes="Bold" HorizontalOptions="Center" Text="Searching for fitness classes has never been easier! Organise your classes using this app." VerticalOptions="End" />
         </VerticalStackLayout>
     </ScrollView>
 

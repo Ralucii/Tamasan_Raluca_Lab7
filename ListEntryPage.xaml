@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tamasan_Raluca_Lab7.ListEntryPage"
-             Title="ListEntryPage">
+             Title="Classes Lists">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Shopping List"
+        <ToolbarItem Text="Add fitness classes to your list"
  Clicked="OnShopListAddedClicked" />
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"

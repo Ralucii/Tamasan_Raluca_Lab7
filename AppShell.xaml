@@ -13,11 +13,11 @@
  />
 
         <ShellContent
- Title="My Shopping Lists"
+ Title="My Classes Lists"
  ContentTemplate="{DataTemplate local:ListEntryPage}"
  />
         <ShellContent
- Title="My Shops"
+ Title="Studio Locations"
  ContentTemplate="{DataTemplate local:ShopEntryPage}"
  />
         <ShellContent

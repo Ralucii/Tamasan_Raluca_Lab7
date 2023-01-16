@@ -4,20 +4,26 @@ namespace Tamasan_Raluca_Lab7;
 
 public partial class ListPage : ContentPage
 {
-	public ListPage()
-	{
-		InitializeComponent();
-	}
+    private ShopList slist;
 
-    async void OnSaveButtonClicked(object sender, EventArgs e)
+    public ListPage()
     {
-        var slist = (ShopList)BindingContext;
-        slist.Date = DateTime.UtcNow;
-        Shop selectedShop = (ShopPicker.SelectedItem as Shop);
-        slist.ShopID = selectedShop.ID;
-        await App.Database.SaveShopListAsync(slist);
+        InitializeComponent();
+    }
+
+    private void OnSaveButtonClicked(object sender, EventArgs e)
+    {
+        OnSaveButtonClicked(sender, e, slist);
+    }
+
+    async void OnSaveButtonClicked(object sender, EventArgs e, ShopList slist)
+    {
+        ShopList bindingContext = (ShopList)BindingContext;
+        bindingContext.Date = DateTime.UtcNow;
+        await App.Database.SaveShopListAsync(bindingContext);
         await Navigation.PopAsync();
     }
+
     async void OnDeleteButtonClicked(object sender, EventArgs e)
     {
         var slist = (ShopList)BindingContext;
@@ -27,12 +33,10 @@ public partial class ListPage : ContentPage
 
     async void OnChooseButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new ProductPage((ShopList)
-       this.BindingContext)
+        await Navigation.PushAsync(new ProductPage((ShopList)this.BindingContext)
         {
             BindingContext = new Product()
         });
-
     }
 
     protected override async void OnAppearing()
@@ -58,5 +62,4 @@ public partial class ListPage : ContentPage
             await Navigation.PopAsync();
         }
     }
-
-    }
+}
